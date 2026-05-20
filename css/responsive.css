@@ -1,0 +1,259 @@
+@media (max-width: 1120px) {
+  .navbar {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1.1rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 6.2rem;
+    right: 3vw;
+    width: min(23rem, calc(100vw - 2rem));
+    display: grid;
+    gap: 0;
+    padding: 1.2rem;
+    background: rgba(8, 6, 4, 0.95);
+    border: 1px solid rgba(248, 243, 234, 0.14);
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(18px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.6rem);
+    visibility: hidden;
+    transition:
+      opacity var(--transition-fast),
+      transform var(--transition-fast),
+      visibility var(--transition-fast);
+  }
+
+  body.nav-open .nav-links {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .nav-links li + li {
+    border-top: 1px solid rgba(248, 243, 234, 0.1);
+  }
+
+  .nav-links a {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.25rem;
+    font-size: 0.82rem;
+  }
+
+  .nav-links a::after {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: 0.18rem;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    opacity: 0.55;
+    transform: rotate(45deg);
+  }
+
+  .nav-actions {
+    padding-top: 0;
+  }
+
+  .nav-divider {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    min-height: auto;
+    display: block;
+    padding-top: 12rem;
+    padding-bottom: 0;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  .hero-content {
+    padding-bottom: 5rem;
+  }
+
+  .hero-feature-strip {
+    position: relative;
+  }
+
+  .feature-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-feature:nth-child(2) {
+    border-right: 0;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  section {
+    padding: 4.5rem 0;
+  }
+
+  .site-header {
+    padding: 1rem 0;
+    background: rgba(5, 4, 3, 0.78);
+    backdrop-filter: blur(16px);
+  }
+
+  .navbar {
+    width: min(90%, 1580px);
+    gap: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.24rem;
+  }
+
+  .logo span {
+    max-width: 11rem;
+    font-size: 0.57rem;
+    line-height: 1.35;
+  }
+
+  .nav-links {
+    top: 5.4rem;
+    right: 5vw;
+    width: min(22rem, 90vw);
+  }
+
+  .nav-links a,
+  .cart-link {
+    font-size: 0.74rem;
+  }
+
+  .nav-actions {
+    gap: 0.7rem;
+  }
+
+  .cart-link {
+    gap: 0.55rem;
+  }
+
+  .cart-link svg {
+    width: 1.18rem;
+    height: 1.18rem;
+  }
+
+  .menu-toggle {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .hero {
+    padding-top: 10rem;
+  }
+
+  .hero-media img {
+    object-position: 58% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 3, 2, 0.95) 0%,
+        rgba(3, 3, 2, 0.76) 54%,
+        rgba(3, 3, 2, 0.38) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(3, 3, 2, 0.58) 0%,
+        rgba(3, 3, 2, 0.08) 48%
+      );
+  }
+
+  .hero-content {
+    padding-bottom: 4rem;
+  }
+
+  .hero-content > p:not(.eyebrow) {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-feature,
+  .hero-feature:first-child,
+  .hero-feature:nth-child(2) {
+    min-height: 7rem;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(248, 243, 234, 0.14);
+  }
+
+  .hero-feature:last-child {
+    border-bottom: 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.45rem;
+  }
+
+  .logo {
+    font-size: 1.08rem;
+  }
+
+  .logo span {
+    max-width: 9rem;
+    font-size: 0.52rem;
+  }
+
+  .cart-link {
+    font-size: 0;
+  }
+
+  .cart-link::before {
+    content: "0";
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    padding-top: 9.5rem;
+  }
+}

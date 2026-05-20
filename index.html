@@ -19,13 +19,13 @@
 <body>
 
     <header class="site-header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary navigation">
             <a href="index.html" class="logo">
                 Aura Archive
                 <span>Curated. Timeless. Conscious.</span>
             </a>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="pages/collections.html">Collections</a></li>
                 <li><a href="pages/editorial.html">The Thread</a></li>
                 <li><a href="pages/lookbook.html">Lookbook</a></li>
@@ -43,6 +43,12 @@
                     </svg>
                 </a>
             </div>
+
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="screen-reader-text">Open menu</span>
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+            </button>
         </nav>
     </header>
 
@@ -212,6 +218,7 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>
