@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Archive</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <title>Aura Archive</title>
 </head>
 
 <body>
 
     <header class="site-header">
-        <nav class="navbar container">
-            <a href="index.html" class="logo">Aura Archive</a>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                Aura Archive
+                <span>Curated. Timeless. Conscious.</span>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="pages/collections.html">Collections</a></li>
@@ -27,25 +32,164 @@
                 <li><a href="pages/shop-the-look.html">Shop The Look</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <span class="nav-divider" aria-hidden="true"></span>
+                <a href="pages/shop-the-look.html" class="cart-link" aria-label="View cart">
+                    Cart (0)
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.5 8.5h11l1 12h-13l1-12Z"></path>
+                        <path d="M9 8.5V6a3 3 0 0 1 6 0v2.5"></path>
+                    </svg>
+                </a>
+            </div>
         </nav>
     </header>
 
     <main>
 
-        <section class="hero">
-            Hero Video
+        <section class="hero" aria-label="Aura Archive seasonal edit">
+            <picture class="hero-media">
+                <img src="assets/images/aura-archive-hero.png"
+                    alt="Fashion model in a pleated ivory dress standing among warm stone columns" fetchpriority="high">
+            </picture>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-inner">
+                <aside class="scroll-cue" aria-hidden="true">
+                    <span class="cue-line"></span>
+                    <span class="cue-label">Scroll to discover</span>
+                    <span class="cue-arrow"></span>
+                </aside>
+
+                <div class="hero-content">
+                    <p class="eyebrow">The Seasonal Edit</p>
+
+                    <h1>Quiet luxury,<br>archived <em>in motion.</em></h1>
+
+                    <div class="gold-line"></div>
+
+                    <p>
+                        Curated garments, artisan stories, and timeless design for a slower approach to fashion.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="pages/collections.html" class="btn btn-primary">
+                            Explore Collection
+                            <span aria-hidden="true">&rarr;</span>
+                        </a>
+                        <a href="pages/editorial.html" class="btn btn-secondary">Discover The Thread</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-feature-strip">
+                <div class="feature-grid">
+                    <article class="hero-feature">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M24 42V10"></path>
+                            <path d="M24 10c-9 7-13 14-13 21 0 6 5 11 13 11s13-5 13-11c0-7-4-14-13-21Z">
+                            </path>
+                            <path d="M24 28 14 19"></path>
+                            <path d="M24 34 36 22"></path>
+                        </svg>
+                        <div>
+                            <h3>Slow Fashion</h3>
+                            <p>Timeless pieces. Thoughtfully made.</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-feature">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M7 29h8l7 7h10c4 0 7-3 7-7"></path>
+                            <path d="M15 29v-8c0-4 3-7 7-7h1"></path>
+                            <path d="M28 15c2-3 7-3 9 0 2 3 1 7-2 10l-7 6-7-6c-3-3-4-7-2-10 2-3 7-3 9 0Z">
+                            </path>
+                            <path d="M7 37h22"></path>
+                        </svg>
+                        <div>
+                            <h3>Artisan Made</h3>
+                            <p>Honoring craft and tradition.</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-feature">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M8 17h32L24 40 8 17Z"></path>
+                            <path d="M14 17 20 8h8l6 9"></path>
+                            <path d="M20 17 24 40l4-23"></path>
+                            <path d="M14 17h20"></path>
+                        </svg>
+                        <div>
+                            <h3>Limited Edition</h3>
+                            <p>Exclusive drops. Rare finds.</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-feature">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M33 12c-10 0-18 8-18 18 0 3 1 6 2 8"></path>
+                            <path d="M33 12c4 5 6 10 6 15 0 7-5 12-12 12-6 0-11-4-12-9"></path>
+                            <path d="M10 39c8-1 15-5 20-12"></path>
+                            <path d="M23 32c7 0 13 2 18 6"></path>
+                            <path d="M11 26c8 1 16 0 24-5"></path>
+                        </svg>
+                        <div>
+                            <h3>Conscious Choices</h3>
+                            <p>Ethical today. Essential forever.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section class="featured-collections">
-            Featured Collections
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">Featured Collections</p>
+                    <h2>Designed for permanence, styled for now.</h2>
+                </div>
+
+                <div class="section-copy">
+                    <p>
+                        Discover quietly expressive wardrobe pieces selected for texture, tailoring, and longevity.
+                    </p>
+                    <a href="pages/collections.html" class="text-link">View Collections</a>
+                </div>
+            </div>
         </section>
 
         <section class="editorial-story">
-            Editorial Story
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">The Thread</p>
+                    <h2>Stories behind fabric, form, and craft.</h2>
+                </div>
+
+                <div class="section-copy">
+                    <p>
+                        Read maker notes, styling edits, and interviews tracing each garment from studio to archive.
+                    </p>
+                    <a href="pages/editorial.html" class="text-link">Read The Thread</a>
+                </div>
+            </div>
         </section>
 
         <section class="shop-look">
-            Shop The Look
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">Shop The Look</p>
+                    <h2>Editorial styling with direct discovery.</h2>
+                </div>
+
+                <div class="section-copy">
+                    <p>
+                        Move from inspiration to investment pieces with refined looks built for repeat wear.
+                    </p>
+                    <a href="pages/shop-the-look.html" class="text-link">Shop The Look</a>
+                </div>
+            </div>
         </section>
 
     </main>
