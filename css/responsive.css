@@ -104,11 +104,55 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .thread-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .thread-content {
+    max-width: 48rem;
+    padding-top: 0;
+  }
+
+  .section-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-intro .section-copy {
+    justify-self: start;
+    max-width: 38rem;
+    padding-bottom: 0;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collection-card {
+    min-height: 31rem;
+  }
+
+  .collection-card:first-child {
+    grid-column: 1 / -1;
+    min-height: 31rem;
+  }
 }
 
 @media (max-width: 720px) {
   section {
     padding: 4.5rem 0;
+  }
+
+  .section-shell {
+    padding-top: 4.5rem;
+    padding-bottom: 4.75rem;
+  }
+
+  .section-shell::after {
+    top: 1.6rem;
+    left: 5%;
   }
 
   .site-header {
@@ -203,6 +247,68 @@
     min-width: 0;
   }
 
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin-top: 2.6rem;
+  }
+
+  .collection-card,
+  .collection-card:first-child {
+    grid-column: auto;
+    min-height: 30rem;
+  }
+
+  .collection-card-content {
+    padding: 1.55rem;
+  }
+
+  .collection-card-content h3 {
+    font-size: 1.65rem;
+  }
+
+  .editorial-story {
+    background:
+      radial-gradient(circle at 24% 8%, rgba(214, 179, 109, 0.12), transparent 17rem),
+      linear-gradient(
+        180deg,
+        var(--bg-page) 0%,
+        var(--bg-page-soft) 52%,
+        var(--bg-page) 100%
+      );
+  }
+
+  .shop-look {
+    background:
+      radial-gradient(circle at 74% 18%, rgba(214, 179, 109, 0.08), transparent 17rem),
+      linear-gradient(
+        180deg,
+        var(--bg-page) 0%,
+        var(--bg-page-soft) 46%,
+        var(--bg-page) 100%
+      );
+  }
+
+  .thread-image {
+    aspect-ratio: 1.28;
+  }
+
+  .thread-image img {
+    object-position: 74% center;
+  }
+
+  .thread-feature {
+    margin-bottom: 2rem;
+  }
+
+  .thread-feature h2 {
+    font-size: 2.75rem;
+  }
+
+  .thread-link strong {
+    font-size: 1.35rem;
+  }
+
   .feature-grid {
     grid-template-columns: 1fr;
   }
@@ -255,5 +361,18 @@
 
   .hero {
     padding-top: 9.5rem;
+  }
+
+  .collection-card,
+  .collection-card:first-child {
+    min-height: 27rem;
+  }
+
+  .thread-image {
+    aspect-ratio: 1.08;
+  }
+
+  .thread-feature h2 {
+    font-size: 2.35rem;
   }
 }
