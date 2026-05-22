@@ -800,6 +800,210 @@ section {
     linear-gradient(180deg, var(--bg-page) 0%, var(--bg-page-soft) 46%, var(--bg-page) 100%);
 }
 
+.shop-look-intro {
+  margin-bottom: 3.4rem;
+}
+
+.look-image-wrapper {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(248, 243, 234, 0.12);
+  background: #080604;
+  box-shadow: 0 2.4rem 6rem rgba(0, 0, 0, 0.28);
+}
+
+.look-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  z-index: 3;
+  border: 1px solid rgba(248, 243, 234, 0.08);
+  pointer-events: none;
+}
+
+.look-media {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(38rem, 50vw, 48rem);
+}
+
+.look-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(5, 4, 3, 0.24) 0%, rgba(5, 4, 3, 0.02) 42%, rgba(5, 4, 3, 0.32) 100%),
+    linear-gradient(0deg, rgba(5, 4, 3, 0.38) 0%, rgba(5, 4, 3, 0.02) 48%, rgba(5, 4, 3, 0.16) 100%);
+  pointer-events: none;
+}
+
+.look-media img {
+  width: 100%;
+  height: clamp(38rem, 50vw, 48rem);
+  object-fit: cover;
+  object-position: 58% center;
+  transform: scale(1.01);
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 4;
+  width: 2.35rem;
+  height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 229, 167, 0.72);
+  border-radius: 50%;
+  background: rgba(214, 179, 109, 0.88);
+  color: #160f09;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 0.5rem rgba(214, 179, 109, 0.12),
+    0 0.85rem 2rem rgba(0, 0, 0, 0.28);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hotspot span {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1;
+  transform: translateY(-0.03rem);
+}
+
+.hotspot:hover,
+.hotspot:focus-visible,
+.hotspot.is-active {
+  background: #f0d18b;
+  color: #0c0805;
+  box-shadow:
+    0 0 0 0.72rem rgba(214, 179, 109, 0.18),
+    0 0 2.2rem rgba(214, 179, 109, 0.22),
+    0 1.05rem 2.2rem rgba(0, 0, 0, 0.34);
+  outline: none;
+  transform: scale(1.08);
+}
+
+.hotspot-coat {
+  top: 40%;
+  left: 58%;
+}
+
+.hotspot-bag {
+  top: 34%;
+  left: 68%;
+}
+
+.hotspot-shoes {
+  top: 83%;
+  left: 62%;
+}
+
+.look-card-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.product-card {
+  position: absolute;
+  width: min(17rem, calc(100% - 2rem));
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(248, 243, 234, 0.14);
+  background: rgba(9, 7, 5, 0.74);
+  box-shadow: 0 1.35rem 3.6rem rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+  color: var(--text-inverse);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.65rem);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.product-card.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.product-card p {
+  margin-bottom: 0.55rem;
+  color: var(--accent-gold);
+  font-size: 0.69rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.product-card h3 {
+  margin-bottom: 0.8rem;
+  color: var(--text-inverse);
+  font-size: 1.45rem;
+  line-height: 1.02;
+}
+
+.product-card span {
+  display: block;
+  margin-bottom: 0.95rem;
+  color: rgba(248, 243, 234, 0.76);
+  font-size: 0.95rem;
+}
+
+.product-card a {
+  display: inline-flex;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--accent-gold);
+  color: var(--text-inverse);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.product-card a:hover,
+.product-card a:focus-visible {
+  color: var(--accent-gold);
+  outline: none;
+}
+
+.product-card-coat {
+  top: 23%;
+  left: 36%;
+}
+
+.product-card-bag {
+  top: 21%;
+  right: 6%;
+}
+
+.product-card-shoes {
+  right: 19%;
+  bottom: 9%;
+}
+
+.look-showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(248, 243, 234, 0.12);
+}
+
+.look-showcase-footer p {
+  color: var(--text-muted-inverse);
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.55fr);
