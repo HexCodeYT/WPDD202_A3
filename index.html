@@ -238,18 +238,79 @@
             </div>
         </section>
 
-        <section class="section-shell shop-look" data-section="03">
-            <div class="container section-grid">
-                <div>
-                    <p class="section-kicker">Shop The Look</p>
-                    <h2>Editorial styling with direct discovery.</h2>
+        <section class="section-shell shop-look shop-look-showcase" id="shop-the-look" data-section="03">
+            <div class="container">
+                <div class="section-intro shop-look-intro">
+                    <div>
+                        <p class="section-kicker">Shop The Look</p>
+                        <h2>A complete edit, styled in one frame.</h2>
+                    </div>
+
+                    <div class="section-copy">
+                        <p>
+                            A layered seasonal look with refined essentials selected for quiet repetition.
+                        </p>
+                        <a href="pages/shop-the-look.html" class="text-link">View The Edit</a>
+                    </div>
                 </div>
 
-                <div class="section-copy">
-                    <p>
-                        Move from inspiration to investment pieces with refined looks built for repeat wear.
-                    </p>
-                    <a href="pages/shop-the-look.html" class="text-link">Shop The Look</a>
+                <div class="look-image-wrapper" data-shop-look>
+                    <div class="look-media">
+                        <img src="assets/images/shop/shop-the-look-editorial.png"
+                            alt="Model in an ivory wool coat carrying a brown leather bag in a warm stone gallery"
+                            loading="lazy" decoding="async">
+
+                        <button class="hotspot hotspot-coat is-active" type="button"
+                            aria-label="View Cashmere Wool Coat" aria-expanded="true"
+                            aria-controls="look-product-coat" data-product="coat">
+                            <span aria-hidden="true">+</span>
+                        </button>
+
+                        <button class="hotspot hotspot-bag" type="button"
+                            aria-label="View Structured Leather Shoulder Bag" aria-expanded="false"
+                            aria-controls="look-product-bag" data-product="bag">
+                            <span aria-hidden="true">+</span>
+                        </button>
+
+                        <button class="hotspot hotspot-shoes" type="button" aria-label="View Polished Leather Loafer"
+                            aria-expanded="false" aria-controls="look-product-shoes" data-product="shoes">
+                            <span aria-hidden="true">+</span>
+                        </button>
+                    </div>
+
+                    <div class="look-card-layer">
+                        <article class="product-card product-card-coat is-active" id="look-product-coat"
+                            aria-label="Cashmere Wool Coat" data-product-card="coat" aria-hidden="false">
+                            <p>Limited Seasonal Edit</p>
+                            <h3>Cashmere Wool Coat</h3>
+                            <span>$890</span>
+                            <a href="pages/seasonal-edits.html">View Piece</a>
+                        </article>
+
+                        <article class="product-card product-card-bag" id="look-product-bag"
+                            aria-label="Structured Leather Shoulder Bag" data-product-card="bag" aria-hidden="true">
+                            <p>Archive Accessories</p>
+                            <h3>Structured Leather Shoulder Bag</h3>
+                            <span>$420</span>
+                            <a href="pages/shop-the-look.html">View Piece</a>
+                        </article>
+
+                        <article class="product-card product-card-shoes" id="look-product-shoes"
+                            aria-label="Polished Leather Loafer" data-product-card="shoes" aria-hidden="true">
+                            <p>Permanent Collection</p>
+                            <h3>Polished Leather Loafer</h3>
+                            <span>$360</span>
+                            <a href="pages/permanent-collection.html">View Piece</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="look-showcase-footer">
+                    <p>Coat, bag, and shoes from the seasonal archive edit.</p>
+                    <a href="pages/shop-the-look.html" class="btn btn-primary">
+                        Shop The Look
+                        <span aria-hidden="true">&rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
